@@ -1,0 +1,14 @@
+.custom-carousel {
+  height: 60vh;
+  overflow: hidden;
+}
+
+.custom-carousel .carousel-inner,
+.custom-carousel .carousel-item,
+.custom-carousel .carousel-item img {
+  height: 100%;
+}
+
+.custom-carousel .carousel-item img {
+  object-fit: cover; /* This ensures images cover the container without distortion */
+}
