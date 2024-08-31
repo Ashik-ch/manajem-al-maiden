@@ -6,6 +6,7 @@
  */
 :root {
     --bs-blue: #0d6efd;
+    --mam-color: #0d6efd;
     --bs-indigo: #6610f2;
     --bs-purple: #6f42c1;
     --bs-pink: #d63384;
@@ -3082,20 +3083,20 @@ fieldset:disabled .btn {
 
 .btn-primary {
     color: #000;
-    background-color: #AB7442;
+    background-color: var(--mam-color);
     border-color: #AB7442
 }
 
 .btn-primary:hover {
     color: #000;
-    background-color: #b8895e;
+    background-color: var(--mam-color);
     border-color: #b38255
 }
 
 .btn-check:focus+.btn-primary,
 .btn-primary:focus {
     color: #000;
-    background-color: #b8895e;
+    background-color: var(--mam-color);
     border-color: #b38255;
     box-shadow: 0 0 0 .25rem rgba(145, 99, 56, 0.5)
 }
@@ -3106,7 +3107,7 @@ fieldset:disabled .btn {
 .btn-primary.active,
 .show>.btn-primary.dropdown-toggle {
     color: #000;
-    background-color: #bc9068;
+    background-color: var(--mam-color);
     border-color: #b38255
 }
 
@@ -3121,7 +3122,7 @@ fieldset:disabled .btn {
 .btn-primary:disabled,
 .btn-primary.disabled {
     color: #000;
-    background-color: #AB7442;
+    background-color: var(--mam-color);
     border-color: #AB7442
 }
 
