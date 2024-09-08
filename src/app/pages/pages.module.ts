@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { ServiceComponent } from './service/service.component';
+import { ProductComponent } from './product/product.component';
 
 const Component = [
   HomeComponent,
@@ -17,7 +18,8 @@ const Component = [
 @NgModule({
   declarations: [
     Component,
-    ServiceComponent
+    ServiceComponent,
+    ProductComponent
   ],
   imports: [
     CommonModule,
