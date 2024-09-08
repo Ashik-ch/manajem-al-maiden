@@ -5,6 +5,7 @@ import { PagesRoutingModule } from './home/pages-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
+import { ServiceComponent } from './service/service.component';
 
 const Component = [
   HomeComponent,
@@ -15,7 +16,8 @@ const Component = [
 
 @NgModule({
   declarations: [
-    Component
+    Component,
+    ServiceComponent
   ],
   imports: [
     CommonModule,
