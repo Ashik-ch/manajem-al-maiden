@@ -13,79 +13,47 @@
 </div>
 <!-- Page Header End -->
 
-
 <!-- Products Start -->
 <div class="container-xxl py-5">
     <div class="container">
-        <div class="section-title text-center">
+        <div class="text-center">
             <h1 class="display-5 mb-5">Our Products</h1>
         </div>
         <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
             <div class="col-12 text-center">
                 <ul class="list-inline mb-5" id="portfolio-flters">
-                    <li class="mx-2 active" data-filter="*">Minerals</li>
-                    <li class="mx-2" data-filter=".first">Production Chemicals </li>
-                    <li class="mx-2" data-filter=".second">Specialty Chemicals </li>
+                    <li class="mx-2" [class.active]="activeCategory === 'minerals'"
+                        (click)="setActiveCategory('minerals')">Minerals</li>
+                    <li class="mx-2" [class.active]="activeCategory === 'productionChemicals'"
+                        (click)="setActiveCategory('productionChemicals')">Production Chemicals</li>
+                    <li class="mx-2" [class.active]="activeCategory === 'specialtyChemicals'"
+                        (click)="setActiveCategory('specialtyChemicals')">Specialty Chemicals</li>
                 </ul>
             </div>
         </div>
-        <div class="row g-4 portfolio-container">
-            <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                <div class="rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="assets/img/img5.jpg" alt="">
-                        <div class="portfolio-overlay">
-                            <a class="btn btn-square btn-outline-light mx-1" href="assets/img/img5.jpg"
-                                data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="border border-5 border-light border-top-0 p-4">
-                        <h4 class="text-primary fw-medium mb-2">Minerals</h4>
-                        <p class="lh-base mb-0">Manajem is a leading supplier of high-quality minerals, essential for
-                            various applications within the oil and gas industry. </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
-                <div class="rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="assets/img/img5.jpg" alt="">
-                        <div class="portfolio-overlay">
-                            <a class="btn btn-square btn-outline-light mx-1" href="assets/img/img5.jpg"
-                                data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="border border-5 border-light border-top-0 p-4">
-                        <h4 class="text-primary fw-medium mb-2">Production Chemicals </h4>
-                        <p class="lh-base mb-0">Our Production Chemicals division offers a comprehensive range of
-                            products designed to enhance the efficiency and reliability of oil and gas production
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.3s">
-                <div class="rounded overflow-hidden">
-                    <div class="position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="assets/img/img5.jpg" alt="">
-                        <div class="portfolio-overlay">
-                            <a class="btn btn-square btn-outline-light mx-1" href="assets/img/img5.jpg"
-                                data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                            <a class="btn btn-square btn-outline-light mx-1" href=""><i class="fa fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="border border-5 border-light border-top-0 p-4">
-                        <h4 class="text-primary fw-medium mb-2">Specialty Chemicals </h4>
-                        <p class="lh-base mb-0"> Manajem's Specialty Chemicals unit provides advanced chemical
-                            solutions tailored to address specific challenges in the oil and gas sector
 
-                        </p>
+
+        <div class="row g-4 portfolio-container justify-content-center" *ngFor="let category of filteredProducts">
+            <div *ngFor="let product of category.products" class="col-lg-4 col-md-6 portfolio-item wow fadeInUp h-100"
+                data-wow-delay="0.1s">
+                <div class="desc overflow-hidden h-100">
+                    <div class="position-relative overflow-hidden h-100">
+                        <img class="img-fluid w-100 h-100" src="assets/img/img5.jpg" alt="">
+                        <!-- <div class="portfolio-overlay">
+                            <a class="btn btn-square btn-outline-light mx-1" href="assets/img/img5.jpg"
+                                data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                             <a class="btn btn-square btn-outline-light mx-1" href=""> <i class="fa fa-link"></i>
+                            </a> 
+                        </div> -->
+                    </div>
+                    <div class="p-4" style="min-height: 210px;">
+                        <h4 class="text-primary fw-medium mb-2">{{ product.name }}</h4>
+                        <p class="lh-base mb-0"> {{ product.details }} {{ product.usage }} </p>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
+
 <!-- Products End -->
