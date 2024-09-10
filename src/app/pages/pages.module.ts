@@ -7,6 +7,7 @@ import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { ServiceComponent } from './service/service.component';
 import { ProductComponent } from './product/product.component';
+import { ContactComponent } from './contact/contact.component';
 
 const Component = [
   HomeComponent,
@@ -19,7 +20,8 @@ const Component = [
   declarations: [
     Component,
     ServiceComponent,
-    ProductComponent
+    ProductComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,
