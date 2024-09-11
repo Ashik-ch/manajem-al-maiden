@@ -48,9 +48,12 @@
                 <a routerLink="business-unit" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Business
                     Unit</a>
                 <div class="dropdown-menu fade-up m-0">
-                    <a routerLink="business-unit" class="dropdown-item">Oilfield Services</a>
-                    <a routerLink="business-unit" class="dropdown-item">Oilfield Chemicals</a>
-                    <a routerLink="business-unit" class="dropdown-item">Trading and Distribution</a>
+                    <a [routerLink]="['business-unit', 'oilfield-services']" class="dropdown-item">Oilfield
+                        Services</a>
+                    <a [routerLink]="['business-unit', 'oilfield-chemicals']" class="dropdown-item">Oilfield
+                        Chemicals</a>
+                    <a [routerLink]="['business-unit', 'trading-distribution']" class="dropdown-item">Trading and
+                        Distribution</a>
                 </div>
             </div>
             <div class="nav-item dropdown">

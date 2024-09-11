@@ -21,10 +21,11 @@
         </div>
 
         <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
+            <div class="accordion-item" #oilfieldServices>
                 <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <button class="accordion-button" [ngClass]="{'collapsed': !isOilfieldServicesOpen}" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                        [attr.aria-expanded]="isOilfieldServicesOpen ? 'true' : 'false'" aria-controls="collapseOne">
                         <div class="wow fadeInUp" data-wow-delay="0.1s">
                             <div class="row g-3 mb-2 height-fixed">
                                 <div class="col-8 p-4 text-center border-0" style="background-color:#a2dfe2">
@@ -43,8 +44,8 @@
                         </div>
                     </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample">
+                <div id="collapseOne" class="accordion-collapse collapse" [ngClass]="{'show': isOilfieldServicesOpen}"
+                    aria-labelledby="headingOne" data-bs-parent=" #accordionExample">
                     <div class="accordion-body row justify-content-center g-3">
                         <div class="col-md-4">
                             <a href="" class="blog-compact-item-container">
@@ -118,17 +119,19 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item" #oilfieldChemicals>
                 <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <button class="accordion-button" [ngClass]="{'collapsed': !isOilfieldChemicalsOpen}" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                        [attr.aria-expanded]="isOilfieldChemicalsOpen ? 'true' : 'false'" aria-controls="collapseTwo">
+
                         <div class="wow fadeInUp" data-wow-delay="0.1s">
                             <div class="row g-0 my-2 height-fixed">
-                                <div class="overflow-hidden col-4  h-100">
-                                    <img class="img-fluid  h-100" src="assets/img/g1.jpg" alt="">
+                                <div class="overflow-hidden col-4 h-100">
+                                    <img class="img-fluid h-100" src="assets/img/g1.jpg" alt="">
                                 </div>
                                 <div class="col-8 p-4 text-center border-0" style="background-color:#f7e4c2">
-                                    <h4 class="mb-3">Oilfield Chemicals </h4>
+                                    <h4 class="mb-3">Oilfield Chemicals</h4>
                                     <p>In our Oil Field Chemicals unit, we provide a diverse range of chemical solutions
                                         essential for optimizing oil and gas extraction processes. Our oil field
                                         chemicals are formulated to meet the highest standards of performance and
@@ -140,8 +143,8 @@
                         </div>
                     </button>
                 </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                    data-bs-parent="#accordionExample">
+                <div id="collapseTwo" class="accordion-collapse collapse" [ngClass]="{'show': isOilfieldChemicalsOpen}"
+                    aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                     <div class="accordion-body row justify-content-center g-3">
                         <div class="col-md-4">
                             <a href="" class="blog-compact-item-container">
@@ -165,8 +168,8 @@
                                     <!-- <span class="blog-item-tag">Tips</span> -->
                                     <div class="blog-compact-item-content">
                                         <h3>Cementing Chemicals</h3>
-                                        <p> Specialized products used in the cementing process to secure well casings
-                                            and prevent fluid migration. Our cementing solutions are tailored to
+                                        <p> Specialized products used in the cementing process to secure well
+                                            casings and prevent fluid migration. Our cementing solutions are tailored to
                                             withstand various pressures and temperatures.
                                         </p>
                                     </div>
@@ -180,9 +183,9 @@
                                     <!-- <span class="blog-item-tag">Tips</span> -->
                                     <div class="blog-compact-item-content">
                                         <h3>Production Chemicals</h3>
-                                        <p> Chemicals that improve the efficiency of production operations, including
-                                            scale inhibitors, corrosion inhibitors, and surfactants. These products help
-                                            maintain equipment integrity and enhance resource recovery.
+                                        <p> Chemicals that improve the efficiency of production operations,
+                                            including scale inhibitors, corrosion inhibitors, and surfactants. These
+                                            products help maintain equipment integrity and enhance resource recovery.
                                         </p>
                                     </div>
                                 </div>
@@ -195,8 +198,8 @@
                                     <!-- <span class="blog-item-tag">Tips</span> -->
                                     <div class="blog-compact-item-content">
                                         <h3>Enhanced Oil Recovery (EOR) Chemicals</h3>
-                                        <p>Innovative chemicals designed to boost oil recovery from mature fields. Our
-                                            EOR solutions include polymers, surfactants, and chemicals for CO2 and
+                                        <p>Innovative chemicals designed to boost oil recovery from mature fields.
+                                            Our EOR solutions include polymers, surfactants, and chemicals for CO2 and
                                             thermal injection processes.
                                         </p>
                                     </div>
@@ -210,9 +213,9 @@
                                     <!-- <span class="blog-item-tag">Tips</span> -->
                                     <div class="blog-compact-item-content">
                                         <h3>Environmental & Safety Chemicals</h3>
-                                        <p> Products designed to support environmental protection and safety in oilfield
-                                            operations. This includes bioremediation agents, spill containment products,
-                                            and non-toxic additives.
+                                        <p> Products designed to support environmental protection and safety in
+                                            oilfield operations. This includes bioremediation agents, spill containment
+                                            products, and non-toxic additives.
                                         </p>
                                     </div>
                                 </div>
@@ -221,19 +224,21 @@
                     </div>
                 </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item" #tradingDistribution>
                 <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        <div class="  wow fadeInUp" data-wow-delay="0.1s">
+                    <button class="accordion-button" [ngClass]="{'collapsed': !isTradingDistributionOpen}" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                        [attr.aria-expanded]="isTradingDistributionOpen ? 'true' : 'false'"
+                        aria-controls="collapseThree">
+                        <div class="wow fadeInUp" data-wow-delay="0.1s">
                             <div class="row g-3 mb-3 height-fixed">
                                 <div class="col-7 p-4 text-center border-0 h-100" style="background-color: #daeeed;">
-                                    <h4 class="mb-3"> Trading and Distribution </h4>
+                                    <h4 class="mb-3">Trading and Distribution</h4>
                                     <p>Our Trading & Distribution unit manages the procurement, logistics, and
-                                        distribution of a wide range of oil and gas products.
-                                        Our Trading & Distribution unit is dedicated to providing seamless and reliable
-                                        supply chain solutions, ensuring that our clients receive the products they
-                                        need, when they need them.</p>
+                                        distribution of a wide range of oil and gas products. Our Trading & Distribution
+                                        unit is dedicated to providing seamless and reliable supply chain solutions,
+                                        ensuring that our clients receive
+                                        the products they need, when they need them.</p>
                                     <a class="fw-medium" href="">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                                 </div>
                                 <div class="overflow-hidden col-5 h-100">
@@ -243,7 +248,8 @@
                         </div>
                     </button>
                 </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                <div id="collapseThree" class="accordion-collapse collapse"
+                    [ngClass]="{'show': isTradingDistributionOpen}" aria-labelledby="headingThree"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body row justify-content-center g-3">
                         <div class="col-md-4">
@@ -285,7 +291,8 @@
                                     <div class="blog-compact-item-content">
                                         <h3>Inventory Management</h3>
                                         <p> Maintaining an extensive inventory to meet the
-                                            demands of our clients. We implement efficient inventory control systems to
+                                            demands of our clients. We implement efficient inventory control systems
+                                            to
                                             manage stock levels and ensure product availability.
                                         </p>
                                     </div>
