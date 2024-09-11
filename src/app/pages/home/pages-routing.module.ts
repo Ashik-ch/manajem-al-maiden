@@ -9,15 +9,11 @@ import { ContactComponent } from '../contact/contact.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'business-unit', component: ServiceComponent },
   { path: 'business-unit/:business', component: ServiceComponent },
   { path: 'contact', component: ContactComponent },
-  {
-    path: 'products-services', component: ProductComponent, children: [
-      { path: 'minerals', component: ProductComponent },
-      { path: 'production-chemicals', component: ProductComponent },
-      { path: 'specialty-chemicals', component: ProductComponent }
-    ]
-  },
+  { path: 'products-services', component: ProductComponent },
+  { path: 'products-services/:ps', component: ProductComponent },
 ];
 
 @NgModule({

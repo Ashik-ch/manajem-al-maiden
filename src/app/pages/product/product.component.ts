@@ -1,13 +1,12 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { filter } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
-export class ProductComponent {
+export class ProductComponent implements OnInit {
 
   productsAndServices = {
     minerals: [
@@ -36,7 +35,7 @@ export class ProductComponent {
             details: "Our product line includes different grades to suit diverse operational requirements."
           }
         ]
-      },
+      }
     ],
     productionChemicals: [
       {
@@ -69,7 +68,7 @@ export class ProductComponent {
             details: "Effective against a wide spectrum of microorganisms, including sulfate-reducing bacteria."
           }
         ]
-      },
+      }
     ],
     specialtyChemicals: [
       {
@@ -105,28 +104,32 @@ export class ProductComponent {
       }
     ]
   };
+
   activeCategory: keyof typeof this.productsAndServices = 'minerals';
   filteredProducts: any[] = [];
+  currentParams: 'minerals' | 'productionChemicals' | 'specialtyChemicals' = 'minerals';
 
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(private AR: ActivatedRoute) { }
 
   ngOnInit() {
-    this.route.firstChild?.params.subscribe(params => {
-      const category = params['category'];
-      if (category && (category in this.productsAndServices)) {
-        this.activeCategory = category as keyof typeof this.productsAndServices;
-
+    this.AR.params.subscribe(params => {
+      const param = params['ps'] as 'minerals' | 'productionChemicals' | 'specialtyChemicals';
+      if (param) {
+        this.currentParams = param;
+        this.activeCategory = this.currentParams;
         this.updateFilteredProducts();
       }
+      else {
+        this.currentParams = "minerals";
+      }
     });
-    this.updateFilteredProducts();
   }
-
 
   setActiveCategory(category: keyof typeof this.productsAndServices) {
     this.activeCategory = category;
     this.updateFilteredProducts();
   }
+
   updateFilteredProducts() {
     this.filteredProducts = this.productsAndServices[this.activeCategory] || [];
   }
