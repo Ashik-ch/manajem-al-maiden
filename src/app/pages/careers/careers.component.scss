@@ -1,0 +1,117 @@
+/*----------------------------------------------------------------*/
+.service_box {
+  height: 314px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  padding: 7.5px;
+}
+.service_box > .row {
+  margin: 0;
+}
+.service_box .service_box_inner {
+  margin: 0;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.service_box .preview_box {
+  height: 100%;
+  background: url("../../../assets/img/dot-pattern.png") repeat scroll 0 0
+    #ffffff;
+  margin: 0;
+}
+.service_box .preview_box img {
+  margin-top: 75px;
+  margin-bottom: 25px;
+  width: 105px;
+}
+.service_box .preview_box h6 {
+  margin: 0;
+  line-height: 1;
+  font-weight: 400;
+  color: #232323;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.service_box .hover_box {
+  background: url("../../../assets/img/dot-pattern.png") repeat scroll 0 0
+    #ffffff;
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  margin: 0;
+  overflow: hidden;
+  transition: all 300ms ease-in-out 0s;
+}
+.service_box .hover_box .inner {
+  position: relative;
+  height: 100%;
+}
+.service_box .hover_box .inner h6 {
+  font-size: 13px;
+  font-weight: 400;
+  color: #232323;
+  line-height: 1;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: -200px;
+  left: 0;
+  margin: 0;
+  transition: all 300ms ease-in-out 0s;
+  transition-delay: 0.1s;
+}
+.service_box .hover_box .inner h6:after {
+  content: "";
+  display: block;
+  margin: 10px auto 0;
+  height: 3px;
+  width: 30px;
+  background: #27ae61;
+  line-height: 1;
+}
+.service_box .hover_box .inner .about {
+  font-size: 12px;
+  line-height: 24px;
+  color: #777777;
+  margin: 0;
+  width: 100%;
+  //   position: absolute;
+  //   top: 85px;
+  //   left: 150%;
+  transition: all 300ms ease-in-out 0s;
+  transition-delay: 0.2s;
+}
+.service_box .hover_box .inner .read_more {
+  text-transform: uppercase;
+  //   position: absolute;
+  //   bottom: -150px;
+  //   left: -50px;
+  //   right: -50px;
+  background: rgba(0, 0, 0, 0.04);
+  line-height: 50px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 11px;
+  color: #232323;
+  transition: all 300ms ease-in-out 0s;
+  transition-delay: 0.3s;
+}
+.service_box:hover .hover_box {
+  left: 0;
+}
+.service_box:hover .hover_box h6 {
+  top: 25px;
+}
+.service_box:hover .hover_box .about {
+  left: 0;
+}
+.service_box:hover .hover_box .read_more {
+  bottom: -50px;
+}
