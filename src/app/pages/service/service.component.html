@@ -46,76 +46,19 @@
                 <div id="collapseOne" class="accordion-collapse collapse" [ngClass]="{'show': isOilfieldServicesOpen}"
                     aria-labelledby="headingOne" data-bs-parent=" #accordionExample">
                     <div class="accordion-body row justify-content-center g-3">
-                        <div class="col-md-4">
+                        <div class="col-md-4" *ngFor="let service of services">
                             <a href="" class="blog-compact-item-container">
                                 <div class="blog-compact-item">
-                                    <img src="assets/img/c1.jpg" alt="">
-                                    <!-- <span class="blog-item-tag">Tips</span> -->
+                                    <img [src]="service.image" alt="">
                                     <div class="blog-compact-item-content">
-                                        <h3>Drilling Services</h3>
-                                        <p> Offering advanced drilling technologies and expertise to
-                                            improve well performance and efficiency. Our services include rotary
-                                            drilling, directional drilling, and managed pressure drilling. </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4">
-                            <a href="" class="blog-compact-item-container">
-                                <div class="blog-compact-item">
-                                    <img src="assets/img/c1.jpg" alt="">
-                                    <!-- <span class="blog-item-tag">Tips</span> -->
-                                    <div class="blog-compact-item-content">
-                                        <h3>Well Completion</h3>
-                                        <p> Providing solutions for completing wells in various geological formations.
-                                            This includes casing, cementing, and stimulation services to maximize
-                                            production and extend the well life.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4">
-                            <a href="" class="blog-compact-item-container">
-                                <div class="blog-compact-item">
-                                    <img src="assets/img/c1.jpg" alt="">
-                                    <!-- <span class="blog-item-tag">Tips</span> -->
-                                    <div class="blog-compact-item-content">
-                                        <h3>Production Optimization</h3>
-                                        <p> Utilizing state-of-the-art technologies and methodologies to enhance
-                                            production rates and reduce operational costs. Services include artificial
-                                            lift systems, well testing, and flowback services.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4">
-                            <a href="" class="blog-compact-item-container">
-                                <div class="blog-compact-item">
-                                    <img src="assets/img/c1.jpg" alt="">
-                                    <!-- <span class="blog-item-tag">Tips</span> -->
-                                    <div class="blog-compact-item-content">
-                                        <h3>Maintenance & Repair</h3>
-                                        <p> Ensuring the reliability and longevity of oilfield equipment through
-                                            comprehensive maintenance and repair services. Our team is equipped to
-                                            handle routine maintenance, emergency repairs, and equipment upgrades.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4">
-                            <a href="" class="blog-compact-item-container">
-                                <div class="blog-compact-item">
-                                    <img src="assets/img/c1.jpg" alt="">
-                                    <!-- <span class="blog-item-tag">Tips</span> -->
-                                    <div class="blog-compact-item-content">
-                                        <h3>Environmental Management</h3>
-                                        <p>Implementing practices and technologies to minimize environmental impact,
-                                            including waste management, spill response, and emission control.</p>
+                                        <h3>{{ service.title }}</h3>
+                                        <p>{{ service.description }}</p>
                                     </div>
                                 </div>
                             </a>
                         </div>
                     </div>
+
                 </div>
             </div>
             <div class="accordion-item" #oilfieldChemicals>
@@ -145,77 +88,13 @@
                 <div id="collapseTwo" class="accordion-collapse collapse" [ngClass]="{'show': isOilfieldChemicalsOpen}"
                     aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                     <div class="accordion-body row justify-content-center g-3">
-                        <div class="col-md-4">
+                        <div class="col-md-4" *ngFor="let chemical of chemicals">
                             <a href="" class="blog-compact-item-container">
                                 <div class="blog-compact-item">
-                                    <img src="assets/img/c1.jpg" alt="">
-                                    <!-- <span class="blog-item-tag">Tips</span> -->
+                                    <img [src]="chemical.image" alt="">
                                     <div class="blog-compact-item-content">
-                                        <h3>Drilling Fluids</h3>
-                                        <p> Customized formulations designed to enhance drilling performance, control
-                                            well pressure, and lubricate the drill bit. Our fluids are engineered to
-                                            meet specific operational needs and environmental regulations.
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4">
-                            <a href="" class="blog-compact-item-container">
-                                <div class="blog-compact-item">
-                                    <img src="assets/img/c1.jpg" alt="">
-                                    <!-- <span class="blog-item-tag">Tips</span> -->
-                                    <div class="blog-compact-item-content">
-                                        <h3>Cementing Chemicals</h3>
-                                        <p> Specialized products used in the cementing process to secure well
-                                            casings and prevent fluid migration. Our cementing solutions are tailored to
-                                            withstand various pressures and temperatures.
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4">
-                            <a href="" class="blog-compact-item-container">
-                                <div class="blog-compact-item">
-                                    <img src="assets/img/c1.jpg" alt="">
-                                    <!-- <span class="blog-item-tag">Tips</span> -->
-                                    <div class="blog-compact-item-content">
-                                        <h3>Production Chemicals</h3>
-                                        <p> Chemicals that improve the efficiency of production operations,
-                                            including scale inhibitors, corrosion inhibitors, and surfactants. These
-                                            products help maintain equipment integrity and enhance resource recovery.
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4">
-                            <a href="" class="blog-compact-item-container">
-                                <div class="blog-compact-item">
-                                    <img src="assets/img/c1.jpg" alt="">
-                                    <!-- <span class="blog-item-tag">Tips</span> -->
-                                    <div class="blog-compact-item-content">
-                                        <h3>Enhanced Oil Recovery (EOR) Chemicals</h3>
-                                        <p>Innovative chemicals designed to boost oil recovery from mature fields.
-                                            Our EOR solutions include polymers, surfactants, and chemicals for CO2 and
-                                            thermal injection processes.
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4">
-                            <a href="" class="blog-compact-item-container">
-                                <div class="blog-compact-item">
-                                    <img src="assets/img/c1.jpg" alt="">
-                                    <!-- <span class="blog-item-tag">Tips</span> -->
-                                    <div class="blog-compact-item-content">
-                                        <h3>Environmental & Safety Chemicals</h3>
-                                        <p> Products designed to support environmental protection and safety in
-                                            oilfield operations. This includes bioremediation agents, spill containment
-                                            products, and non-toxic additives.
-                                        </p>
+                                        <h3>{{ chemical.title }}</h3>
+                                        <p>{{ chemical.description }}</p>
                                     </div>
                                 </div>
                             </a>
@@ -251,84 +130,19 @@
                     [ngClass]="{'show': isTradingDistributionOpen}" aria-labelledby="headingThree"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body row justify-content-center g-3">
-                        <div class="col-md-4">
+                        <div class="col-md-4" *ngFor="let service of supplyChainServices">
                             <a href="" class="blog-compact-item-container">
                                 <div class="blog-compact-item">
-                                    <img src="assets/img/c1.jpg" alt="">
-                                    <!-- <span class="blog-item-tag">Tips</span> -->
+                                    <img [src]="service.image" alt="">
                                     <div class="blog-compact-item-content">
-                                        <h3>Product Sourcing</h3>
-                                        <p> Identifying and procuring high-quality oil and gas products from reputable
-                                            suppliers. We ensure that all products meet industry standards and client
-                                            specifications.
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-md-4">
-                            <a href="" class="blog-compact-item-container">
-                                <div class="blog-compact-item">
-                                    <img src="assets/img/c1.jpg" alt="">
-                                    <!-- <span class="blog-item-tag">Tips</span> -->
-                                    <div class="blog-compact-item-content">
-                                        <h3>Logistics Management</h3>
-                                        <p> Coordinating the transportation and delivery of
-                                            products to ensure timely and efficient distribution. Our logistics
-                                            solutions include pipeline transportation, trucking, and shipping.
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4">
-                            <a href="" class="blog-compact-item-container">
-                                <div class="blog-compact-item">
-                                    <img src="assets/img/c1.jpg" alt="">
-                                    <!-- <span class="blog-item-tag">Tips</span> -->
-                                    <div class="blog-compact-item-content">
-                                        <h3>Inventory Management</h3>
-                                        <p> Maintaining an extensive inventory to meet the
-                                            demands of our clients. We implement efficient inventory control systems
-                                            to
-                                            manage stock levels and ensure product availability.
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4">
-                            <a href="" class="blog-compact-item-container">
-                                <div class="blog-compact-item">
-                                    <img src="assets/img/c1.jpg" alt="">
-                                    <!-- <span class="blog-item-tag">Tips</span> -->
-                                    <div class="blog-compact-item-content">
-                                        <h3>Market Analysis</h3>
-                                        <p> Conducting market research to identify trends and opportunities. This
-                                            helps us to make informed decisions on product sourcing, pricing, and
-                                            distribution strategies.
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-4">
-                            <a href="" class="blog-compact-item-container">
-                                <div class="blog-compact-item">
-                                    <img src="assets/img/c1.jpg" alt="">
-                                    <!-- <span class="blog-item-tag">Tips</span> -->
-                                    <div class="blog-compact-item-content">
-                                        <h3>Customer Support</h3>
-                                        <p> Providing exceptional service to our clients, including
-                                            order processing, tracking, and resolving any issues related to product
-                                            delivery and quality.
-                                        </p>
+                                        <h3>{{ service.title }}</h3>
+                                        <p>{{ service.description }}</p>
                                     </div>
                                 </div>
                             </a>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
