@@ -1,0 +1,43 @@
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5">
+    <div class="container py-5">
+        <h1 class="display-3 text-white mb-3 animated slideInDown">Careers</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                <li class="breadcrumb-item text-white active" aria-current="page">News and Media</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Page Header End -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="display-5 mb-2">News and Media</h1>
+        </div>
+        <section class="blog_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6" *ngFor="let post of blogPosts">
+                        <div class="box">
+                            <div class="img-box">
+                                <img [src]="post.image" [alt]="post.title">
+                                <h4 class="blog_date text-start">
+                                    {{ post.date.split(' ')[0] }}<br>
+                                    {{ post.date.split(' ')[1] }}
+                                </h4>
+                            </div>
+                            <div class="detail-box">
+                                <h5>{{ post.title }}</h5>
+                                <p>{{ post.description }}</p>
+                                <a target="_blank">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

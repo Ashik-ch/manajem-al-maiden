@@ -9,6 +9,7 @@ import { ServiceComponent } from './service/service.component';
 import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
 import { CareersComponent } from './careers/careers.component';
+import { NewsSectionComponent } from './news-section/news-section.component';
 
 const Component = [
   HomeComponent,
@@ -23,7 +24,8 @@ const Component = [
     ServiceComponent,
     ProductComponent,
     ContactComponent,
-    CareersComponent
+    CareersComponent,
+    NewsSectionComponent
   ],
   imports: [
     CommonModule,
