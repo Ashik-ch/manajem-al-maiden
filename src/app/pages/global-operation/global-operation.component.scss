@@ -1,0 +1,31 @@
+.accordion-item:first-of-type {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.accordion-item {
+  background-color: transparent;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+}
+.accordion-header {
+  margin-bottom: 0;
+}
+
+accordion-body {
+  padding: 2rem 0;
+}
+.accordion-body {
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.section-padding {
+  padding-top: 2rem;
+}
+
+.page-header {
+  background: linear-gradient(rgba(53, 53, 53, 0.7), rgba(53, 53, 53, 0.7)),
+    url(/assets/img/sds.jpg) center center no-repeat;
+  background-size: cover;
+}

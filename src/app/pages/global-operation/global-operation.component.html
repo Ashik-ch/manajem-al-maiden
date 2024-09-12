@@ -1,0 +1,49 @@
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5">
+    <div class="container py-5">
+        <h1 class="display-3 text-white mb-3 animated slideInDown">Global operation</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="text-white" href="">Home</a></li>
+                <li class="breadcrumb-item"><a class="text-white">Pages</a></li>
+                <li class="breadcrumb-item text-white active" aria-current="page">Global operation</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<div class="container-xxl py-4">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="display-5 mb-2">Global operation</h1>
+        </div>
+        <section class="faq section-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-12" *ngFor="let item of manajemOperationsData; let i = index">
+                        <!-- <h2> {{ item.heading }}</h2> -->
+                        <div class="accordion" id="accordionGeneral">
+                            <div class="accordion-item">
+                                <h4 class="accordion-header" [id]="'heading' + i">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        [attr.data-bs-target]="'#accordionGeneral' + i" aria-expanded="false"
+                                        [attr.aria-controls]="'accordionGeneral' + i">
+                                        <h5 class="text-primary"> {{ item.heading }}</h5>
+                                    </button>
+                                </h4>
+                                <div [id]="'accordionGeneral' + i" class="accordion-collapse collapse"
+                                    [attr.aria-labelledby]="'heading' + i" data-bs-parent="#accordionGeneral">
+                                    <div class="accordion-body">
+                                        <strong> {{ item.question }}</strong>
+                                        <p class="large-paragraph">
+                                            {{ item.answer }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>

@@ -10,6 +10,7 @@ import { ProductComponent } from './product/product.component';
 import { ContactComponent } from './contact/contact.component';
 import { CareersComponent } from './careers/careers.component';
 import { NewsSectionComponent } from './news-section/news-section.component';
+import { GlobalOperationComponent } from './global-operation/global-operation.component';
 
 const Component = [
   HomeComponent,
@@ -25,7 +26,8 @@ const Component = [
     ProductComponent,
     ContactComponent,
     CareersComponent,
-    NewsSectionComponent
+    NewsSectionComponent,
+    GlobalOperationComponent
   ],
   imports: [
     CommonModule,

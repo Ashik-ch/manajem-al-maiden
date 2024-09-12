@@ -7,6 +7,7 @@ import { ProductComponent } from '../product/product.component';
 import { ContactComponent } from '../contact/contact.component';
 import { CareersComponent } from '../careers/careers.component';
 import { NewsSectionComponent } from '../news-section/news-section.component';
+import { GlobalOperationComponent } from '../global-operation/global-operation.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'products-services/:ps', component: ProductComponent },
   { path: 'careers', component: CareersComponent },
   { path: 'news-media', component: NewsSectionComponent },
+  { path: 'global-operation', component: GlobalOperationComponent },
 ];
 
 @NgModule({
