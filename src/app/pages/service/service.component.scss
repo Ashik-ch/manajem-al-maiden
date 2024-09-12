@@ -130,3 +130,9 @@ span.blog-item-tag {
   font-weight: normal;
   display: inline-block;
 }
+
+.page-header {
+  background: linear-gradient(rgba(53, 53, 53, 0.7), rgba(53, 53, 53, 0.7)),
+    url(/assets/img/img4.jpg) center center no-repeat;
+  background-size: cover;
+}
