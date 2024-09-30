@@ -9,13 +9,13 @@ export class NewsSectionComponent {
 
   blogPosts = [
     {
-      image: 'assets/img/c1.jpg',
+      image: 'assets/img/news1.jpeg',
       date: '14 July',
       title: 'Molestiae ad reiciendis dignissimos',
       description: 'Alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable.',
     },
     {
-      image: 'assets/img/c2.jpg',
+      image: 'assets/img/news1.jpeg',
       date: '20 August',
       title: 'Sed ut perspiciatis unde omnis',
       description: 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s.',

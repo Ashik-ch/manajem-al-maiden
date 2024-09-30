@@ -41,54 +41,54 @@ export class ServiceComponent {
 
   chemicals = [
     {
-      image: 'assets/img/c1.jpg',
+      image: 'assets/img/b2a.jpg',
       title: 'Drilling Fluids',
       description: `Customized formulations designed to enhance drilling performance, control well pressure, and lubricate the drill bit. Our fluids are engineered to meet specific operational needs and environmental regulations.`
     },
     {
-      image: 'assets/img/c1.jpg',
+      image: 'assets/img/b2a.jpg',
       title: 'Cementing Chemicals',
       description: `Specialized products used in the cementing process to secure well casings and prevent fluid migration. Our cementing solutions are tailored to withstand various pressures and temperatures.`
     },
     {
-      image: 'assets/img/c1.jpg',
+      image: 'assets/img/b2a.jpg',
       title: 'Production Chemicals',
       description: `Chemicals that improve the efficiency of production operations, including scale inhibitors, corrosion inhibitors, and surfactants. These products help maintain equipment integrity and enhance resource recovery.`
     },
     {
-      image: 'assets/img/c1.jpg',
+      image: 'assets/img/b2a.jpg',
       title: 'Enhanced Oil Recovery (EOR) Chemicals',
       description: `Innovative chemicals designed to boost oil recovery from mature fields. Our EOR solutions include polymers, surfactants, and chemicals for CO2 and thermal injection processes.`
     },
     {
-      image: 'assets/img/c1.jpg',
+      image: 'assets/img/b2a.jpg',
       title: 'Environmental & Safety Chemicals',
       description: `Products designed to support environmental protection and safety in oilfield operations. This includes bioremediation agents, spill containment products, and non-toxic additives.`
     }
   ];
   services = [
     {
-      image: 'assets/img/c1.jpg',
+      image: 'assets/img/b1b.jpeg',
       title: 'Drilling Services',
       description: `Offering advanced drilling technologies and expertise to improve well performance and efficiency. Our services include rotary drilling, directional drilling, and managed pressure drilling.`
     },
     {
-      image: 'assets/img/c1.jpg',
+      image: 'assets/img/b1b.jpeg',
       title: 'Well Completion',
       description: `Providing solutions for completing wells in various geological formations. This includes casing, cementing, and stimulation services to maximize production and extend the well life.`
     },
     {
-      image: 'assets/img/c1.jpg',
+      image: 'assets/img/b1a.jpeg',
       title: 'Production Optimization',
       description: `Utilizing state-of-the-art technologies and methodologies to enhance production rates and reduce operational costs. Services include artificial lift systems, well testing, and flowback services.`
     },
     {
-      image: 'assets/img/c1.jpg',
+      image: 'assets/img/b1a.jpeg',
       title: 'Maintenance & Repair',
       description: `Ensuring the reliability and longevity of oilfield equipment through comprehensive maintenance and repair services. Our team is equipped to handle routine maintenance, emergency repairs, and equipment upgrades.`
     },
     {
-      image: 'assets/img/c1.jpg',
+      image: 'assets/img/b1a.jpeg',
       title: 'Environmental Management',
       description: `Implementing practices and technologies to minimize environmental impact, including waste management, spill response, and emission control.`
     }

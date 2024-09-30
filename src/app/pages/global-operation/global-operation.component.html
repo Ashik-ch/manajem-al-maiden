@@ -36,9 +36,8 @@
                                     [attr.aria-labelledby]="'heading' + i" data-bs-parent="#accordionGeneral">
                                     <div class="accordion-body">
                                         <strong> {{ item.question }}</strong>
-                                        <p class="large-paragraph">
-                                            {{ item.answer }}
-                                        </p>
+                                        <p class="large-paragraph" [innerHTML]="item.answer"></p>
+
                                     </div>
                                 </div>
                             </div>
