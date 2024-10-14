@@ -74,30 +74,27 @@
             </div>
             <div class="col-lg-6 about-text py-2 wow fadeIn" data-wow-delay="0.5s">
                 <div class="p-lg-5 pe-lg-0">
-                    <div class="text-start">
+                    <!-- <div class="text-start">
                         <h1 class="display-5 mb-4">About Us</h1>
-                    </div>
-                    <p class="mb-4 pb-2">Welcome to <b> Manajem Al Maiden </b>for Oil & Gas Services, a leading provider
-                        of high-quality minerals and chemicals tailored to the unique demands of the oil and gas
-                        industry.
-                        With a commitment to excellence, innovation, and sustainability, we specialize in delivering
-                        products that enhance operational efficiency and support environmentally responsible practices
-                        across various applications.
+                    </div> -->
+                    <p *ngIf="!aboutPage" class="mb-4 pb-2">Welcome to <b> Manajem Al Maiden </b>for Oil & Gas Services,
+                        Our "Our Minerals" section provides an overview of the
+                        high-quality minerals we supply to the oil and gas
+                        industry. Explore our range of mineral products that
+                        enhance operational efficiency and support sustainable
+                        practices in various applications.
                     </p>
-                    <p>
-                        At <b> Manajem Al Maiden,</b> we are dedicated to providing solutions that drive success in the
-                        oil and gas industry. Explore our website to learn more about how our products can support your
-                        business.</p>
+
                     <a *ngIf="!aboutPage" routerLink="about" class="btn btn-primary py-3 px-5">Explore More</a>
-                    <div class="section-title text-start mt-4">
+                    <div *ngIf="aboutPage" class="section-title text-start mt-4">
                         <div class="fs-3 fw-bold mb-4 text-primary">Request a Sample </div>
                     </div>
-                    <p class="mb-4 pb-2"> <span class="fw-bold text-danger"> Interested in our products? </span>
-                        Use the Request Sample feature to order samples of our minerals and
-                        chemicals. This service allows you to evaluate our offerings and ensure they meet your
-                        specific
-                        needs before making a commitment</p>
-
+                    <p *ngIf="aboutPage" class="mb-4 pb-2"> <span class="fw-bold text-danger"> Interested in our
+                            products? </span>
+                        Use the Request Sample feature to order samples of our minerals and chemicals.
+                        This service allows you to evaluate our offerings and
+                        ensure they meet your specific needs before making a
+                        commitment.</p>
                 </div>
             </div>
         </div>
@@ -106,7 +103,7 @@
 <!-- About End -->
 
 <!-- Mission and Vision -->
-<div *ngIf="aboutPage" class="container-fluid bg-white overflow-hidden px-lg-0">
+<!-- <div *ngIf="aboutPage" class="container-fluid bg-white overflow-hidden px-lg-0">
     <div class="container feature px-lg-0">
         <div class="row g-0 mx-lg-0">
             <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
@@ -134,7 +131,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- Feature End -->
 
 

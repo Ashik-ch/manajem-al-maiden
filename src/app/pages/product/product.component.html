@@ -31,7 +31,10 @@
             </div>
         </div>
         <div class="row g-4 portfolio-container justify-content-center" *ngFor="let category of filteredProducts">
-            <p class="text-center border border-1 py-2 text-primary">{{category.description}}</p>
+            <p class="fw-bolder text-center border border-1 px-3 py-2 text-primary">{{category.description}} <br>
+                <small class="fw-normal text-dark"> {{category.subDescription}} </small>
+            </p>
+
             <div *ngFor="let product of category.products" class="col-lg-4 col-md-6 portfolio-item wow fadeInUp h-100"
                 data-wow-delay="0.1s">
                 <div class="desc overflow-hidden h-100">
@@ -46,7 +49,7 @@
                     </div>
                     <div class="p-4" style="min-height: 210px;">
                         <h4 class="text-primary fw-medium mb-2">{{ product.name }}</h4>
-                        <p class="lh-base mb-0"> {{ product.details }} {{ product.usage }} </p>
+                        <p class="lh-base mb-0 h-100"> {{ product.usage }} </p>
                     </div>
                 </div>
             </div>
